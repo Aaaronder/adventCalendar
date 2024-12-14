@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lilita+One&family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --blue: #14213D;
+    --yellow: #FCA311;
+    --grey: #E5E5E5;
+    --red: #E80000;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--blue);
+}
+
+.snow, .snow:after, .snow:before{
+    content: "";
+    position: absolute;
+    top: -650px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff, transparent),
+    radial-gradient(10px 10px at 400px 350px, #fff, transparent),
+    radial-gradient(2px 2px at 500px 100px, #fff, transparent),
+    radial-gradient(3px 3px at 50px 200px, #fff, transparent),
+    radial-gradient(3px 3px at 150px 300px, #fff, transparent),
+    radial-gradient(7px 7px at 250px 400px, #fff, transparent),
+    radial-gradient(4px 4px at 350px 500px, #fff, transparent);
+    background-size: 650px 650px;
+
+    animation-name: snowAnimation;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.snow:after{
+    margin-left: -250px;
+    margin-top: 60px;
+    opacity: 0.5;
+    filter: blur(3px);
+}
+
+.snow:before{
+    margin-left: -350px;
+    margin-top: -40px;
+    opacity: 0.7;
+    filter: blur(1.5px);
+}
+
+@keyframes snowAnimation{
+    0%{
+        transform: translate(0);
+    }
+
+    100%{
+        transform: translateY(650px);
+    }
+}
+
+.box{
+    width: 1400px;
+    height: 850px;
+    background-color: var(--yellow);
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    width: 275px;
+    font-family: Lilita One;
+    color: var(--red);
+    font-size: 100px;
+    text-align: center;
+    margin: auto;
+    rotate: -2.5deg;
+    user-select: none;
+    animation-name: hegy;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hegy{
+    0%, 100%{
+        transform: rotate(0);
+    }
+
+    50%{
+        transform: rotate(3deg);
+    }
+}
+
+.snowflake1{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: -50px;
+    left: -175px;
+    filter: saturate(4);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+.snowflake2{
+    width: 325px;
+    height: 325px;
+    position: absolute;
+    top: 0;
+    left: 405px;
+    z-index: -1;
+    rotate: 20deg;
+    pointer-events: none;
+    user-select: none;
+}
+
+.snowflake3{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 500px;
+    left: 30px;
+    rotate: -20deg;
+    opacity: 0.85;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+.snowflake4{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    rotate: 90deg;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+.snowflake5{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 75px;
+    right: -200px;
+    rotate: 160deg;
+    filter: saturate(3);
+    opacity: 0.9;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+.snowflake6{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 500px;
+    right: 450px;
+    rotate: 5deg;
+    filter: saturate(1);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+.snowflake7{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 25px;
+    right: 400px;
+    rotate: 160deg;
+    filter: saturate(3);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+.snowflake8{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 350px;
+    bottom: -25px;
+    rotate: 10deg;
+    filter: saturate(2);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+
+h6{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    font-family: Lilita One;
+    color: var(--red);
+    font-size: 20px;
+    padding: 2px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.calendar{
+    width: 1290px;
+    height: 600px;
+    border: 2px solid var(--blue);
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(6, 215px);
+    grid-template-areas: 
+    "door8 door17 door1 door3 door14 door24"
+    "door5 door6 door20 door22 door2 door15"
+    "door10 door18 door11 door19 door23 door16"
+    "door9 door7 door12 door13 door21 door4"
+    ;
+}
+
+.image {
+    background-size:150px;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    margin: 10px;
+
+    border: 1px solid black;
+}
+
+.text{
+    width: 100%;
+    height: 100%;
+}
